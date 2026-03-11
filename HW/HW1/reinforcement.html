@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Machine Learning - Reinforcment Algorithms </title>
+        <link rel="icon" type="image/x-icon" href="img/ml.jpg">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1>Machine Learning</h1>
+        </header>
+        <hr>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="supervised.html">Supervised</a>
+            <a href="unsupervised.html">Unsupervised</a>
+            <a href="reinforcement.html"><strong><em>Reinforcment</em></strong></a>
+        </nav>
+        
+        <br><br>
+
+        <main>
+            <h2>Reinforcement Algorithms</h2>
+            <div class="section">
+                <img id="rein" src="img/reinforcement.jpg" alt="Picture of reinforcement algorithm">
+                <p>
+                    Reinforcement learning (RL) is used for problems where there isn’t one single correct answer, but some actions lead to better outcomes than <br>
+                    others. In RL, the model—called an agent—learns by interacting with its environment and receiving rewards or penalties based on its actions. 
+                    Instead of using labeled data, the agent improves through trial and error using a reward signal. The goal is to learn a policy, which is a 
+                    strategy for choosing the best action in a given situation. Some RL methods focus on learning the best policy directly, while others estimate 
+                    how valuable certain states or actions are before making decisions.
+                </p>
+             </div>
+            <div class="section">
+                <div>
+                    <h3>Q - Learning</h3>
+                    <p>
+                        Q-learning is a value-based reinforcement learning algorithm that learns the value of taking a certain action in a specific state. 
+                        It uses a Q-table or function to estimate how good an action is based on the rewards the agent receives over time. By repeatedly 
+                        updating these values, the agent learns which actions lead to the highest long-term rewards.
+                    </p>
+                </div>
+                <hr>
+                <div>
+                    <h3>Proximal Policy Optimization (PPO)</h3>
+                    <p>
+                        Proximal Policy Optimization (PPO) is a policy-based reinforcement learning method designed to make stable and efficient updates 
+                        to a model’s policy. It limits how much the policy can change during each training step, which helps prevent large, unstable updates. 
+                        PPO is widely used in modern reinforcement learning systems, including reinforcement learning from human feedback (RLHF).
+                    </p>
+                </div>
+                <hr>
+                <div>
+                    <h3>Actor-Critic/Advantage Actor-Critic</h3>
+                    <p>
+                       Actor-critic methods combine both policy-based and value-based approaches. The “actor” decides which action to take, while the “critic”
+                        evaluates how good that action was. Advantage Actor-Critic (A2C) improves this process by estimating how much better an action is compared 
+                        to the average action. This helps the model learn more efficiently. 
+                    </p>
+                </div>
+                <hr>
+                <div>
+                    <h3>REINFORCE</h3>
+                    <p>
+                       REINFORCE is an early policy-based reinforcement learning algorithm that updates the policy based on the rewards received after taking actions. 
+                       It increases the probability of actions that lead to higher rewards and decreases the probability of less successful actions. Although it can be 
+                       simple to implement, it often has high variance and can be less stable than newer methods. 
+                    </p>
+                </div>
+            </div>
+        </main>
+       
+        <footer>
+            <hr>
+            <img id="foot" src="img/CSUMBLogo.png" alt="Picture of CSUMB Logo"><br>
+            CST336 Internet Programming. 2026&copy; Jackson <br>
+            <strong>Disclaimer:</strong> The information is for academic purposes only
+        </footer>       
+    </body>
+</html>
