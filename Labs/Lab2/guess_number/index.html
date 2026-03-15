@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Guess a Number </title>
+        <meta charset="utf-8">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <header>
+            <h1> Janaye Jackson </h1>
+        </header>
+        <hr>
+        <main>
+            <div id="main">
+                <h1>Guess the Number!</h1>
+                <h2>Guess a number between 1 and 99 in seven attempts!</h2>
+                <div id="stats">
+                    <p><strong>Wins: </strong><span id="wins"></span> <strong>Losses: </strong><span id="losses"></span></p>
+                </div>
+                Enter a guess: 
+                <input type="text" id="playerGuess" size="5">         
+                <button id="guessBtn"> Guess </button> <br>
+                <button id="resetBtn"> Reset </button> 
+                <div id="feedback"></div>
+                <div> Previous Guesses:
+                    <span id="guesses"></span>
+                </div>
+            </div>
+        </main>
+        
+        <script src="js/script.js"></script> 
+
+        <footer>
+            <hr>
+            <img src="img/CSUMBLogo.png" alt="Picture of CSUMB Logo" width="5%" height="5%"><br>
+            CST336 Internet Programming. 2026&copy; Jackson <br>
+            <strong>Disclaimer:</strong> The information on this page is for educational purposes only
+        </footer>
+    </body>
+</html>
