@@ -3,6 +3,9 @@
     <head>
         <title> Guess a Number </title>
         <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
@@ -11,18 +14,44 @@
             <h1> Janaye Jackson </h1>
         </header>
         <hr>
+        <nav>
+            <a href="../../../index.html">Home</a>
+            <a href="../../Lab1/about.html">About</a>
+            <a href="../../Lab1/contact.html">Contact</a>
+
+            <div class="dropdown">
+                <button class="dropbtn"><strong><em>Labs</em></strong></button>
+                <div class="dropdown-content">
+                    <a href="../../Lab1/index.html">Lab 1</a>
+                    <a href="index.html">Lab 2</a>
+                    <a href="../../Lab3/index.html">Lab 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">HW</button>
+                <div class="dropdown-content">
+                    <a href="../../../HW/HW1/index.html">HW 1</a>
+                    <a href="../../../HW/HW2/index.html">HW 2</a>
+                    <a href="../../../HW/HW3/index.html">HW 3</a>
+                </div>
+            </div>
+        </nav>
+        <hr>
         <main>
             <div id="main">
                 <h1>Guess the Number!</h1>
                 <h2>Guess a number between 1 and 99 in seven attempts!</h2>
                 <div id="stats">
-                    <p><strong>Wins: </strong><span id="wins"></span> <strong>Losses: </strong><span id="losses"></span></p>
+                    <strong>Wins: </strong><span id="wins"></span> <strong>Losses: </strong><span id="losses"></span>
                 </div>
+                <div id="attemps"><strong>Attempts Left: </strong><span id="attempt"></span></div>
+                <br><br>
                 Enter a guess: 
-                <input type="text" id="playerGuess" size="5">         
+                <input type="number" id="playerGuess">         
                 <button id="guessBtn"> Guess </button> <br>
                 <button id="resetBtn"> Reset </button> 
                 <div id="feedback"></div>
+                <br><br>
                 <div> Previous Guesses:
                     <span id="guesses"></span>
                 </div>

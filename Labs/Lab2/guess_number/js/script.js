@@ -13,11 +13,14 @@ initializeGame();
 function initializeGame() {
    randomNumber = Math.floor(Math.random() * 99) + 1;
    console.log("randomNumber: " + randomNumber);
-   attemps = 0;
+   attempts = 0;
 
    //Adding wins and losses stats
    document.querySelector("#wins").textContent = wins;
    document.querySelector("#losses").textContent = losses;
+
+   //Reset attemps
+   document.querySelector("#attempt").textContent = 7;
 
    //hiding the Reset button
    document.querySelector("#resetBtn").style.display = "none";
@@ -48,6 +51,7 @@ function checkGuess() {
     }
 
     attempts++;
+    document.querySelector("#attempt").textContent = (7-attempts);
 
     console.log("Attemps:" + attempts);
     feedback.style.color = "blue";
@@ -58,7 +62,7 @@ function checkGuess() {
     } else {
         document.querySelector("#guesses").textContent += guess + " ";
         if(attempts == 7){
-            feedback.textContent = "Sorry, you do not have any more guesses!";
+            feedback.textContent = "Sorry, you don't have any more guesses! The number was " + randomNumber;
             feedback.style.color = "red";
             losses++;
             gameOver();
