@@ -10,7 +10,7 @@ header, main, nav, footer{
 nav{
     background-color: #333;
     display: flex;
-    justify-content: center; /* centers everything horizontally */
+    justify-content: center;
     gap: 20px;
 }
 
@@ -33,12 +33,15 @@ nav a:hover, .dropbtn:hover{
     border-bottom: 2px orange solid;
 }
 
-/* Dropdown container */
+nav a.active{
+    border-bottom: 3px solid darkblue;
+    font-weight: bold;
+}
+
 .dropdown{
     position: relative;
 }
 
-/* Dropdown content */
 .dropdown-content{
     display: none;
     position: absolute;
@@ -52,7 +55,6 @@ nav a:hover, .dropbtn:hover{
     padding: 12px 16px;
 }
 
-/* Hover effects */
 .dropdown-content a:hover{
     background-color: #ddd;
 }

@@ -29,7 +29,20 @@ nav a, .dropbtn{
 }
 
 nav a:hover, .dropbtn:hover{
-    border-bottom: 2px orange solid;
+    border-bottom: 2px darkblue solid;
+}
+
+nav a.active{
+    border-bottom: 3px solid darkblue;
+    font-weight: bold;
+}
+
+#HW1{
+    background-color: rgb(72, 113, 170);
+    font-size: smaller;
+    width: 850px;
+    border-radius: 5%;
+    margin: 20px auto;
 }
 
 .dropdown{
