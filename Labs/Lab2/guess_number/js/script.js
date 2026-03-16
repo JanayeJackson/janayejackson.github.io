@@ -59,6 +59,7 @@ function checkGuess() {
         feedback.textContent = "You guessed it! You Won!";
         feedback.style.color = "darkblue";
         wins++;
+        gameOver();
     } else {
         document.querySelector("#guesses").textContent += guess + " ";
         if(attempts == 7){
