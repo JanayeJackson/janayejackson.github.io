@@ -29,10 +29,10 @@ nav a, .dropbtn{
 }
 
 nav a:hover, .dropbtn:hover{
-    border-bottom: 2px darkblue solid;
+    border-bottom: 2px black solid;
 }
 
-nav a.active{
+.active{
     border-bottom: 3px solid darkblue;
     font-weight: bold;
 }
