@@ -26,6 +26,9 @@ nav{
 
 nav a, .dropbtn{
     padding: 15px;
+    color: white;
+    background: none;
+    border: none;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -34,9 +37,6 @@ nav a, .dropbtn{
     "wdth" 100;
     font-size: 1.8em;
     text-decoration: none;
-    color: white;
-    background: none;
-    border: none;
 }
 
 nav a:hover, .dropbtn:hover{
@@ -84,16 +84,14 @@ nav a:hover, .dropbtn:hover{
 
 #main{
     text-align: center;
-    background-color: white;
+    background-color: rgb(135, 155, 188);
     color: black;
-}
-
-#main{
     height: 500px;
     width: 350px;
     border-radius: 5%;
     padding: 50px;
     margin: 20px auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 #playerGuess{
