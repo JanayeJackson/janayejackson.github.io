@@ -7,7 +7,7 @@
     max-width: 300px;  
 }
 
-header {
+body {
     background-color: rgb(30, 28, 28);
     color: gray;
     text-align: center;
@@ -67,4 +67,16 @@ nav a:hover, .dropbtn:hover{
 
 .dropdown:hover .dropdown-content{
     display: block;
+}
+
+#quiz{
+    text-align: center;
+    background-color: rgb(216, 225, 240);
+    color: black;
+    width: 600px;
+    height: fit-content;
+    border-radius: 5%;
+    padding: 50px;
+    margin: 20px auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
