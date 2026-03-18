@@ -1,5 +1,5 @@
 //Event Listeners
-document.querySelector("button").addEventListener("click", gradeQuiz);
+document.querySelector("#submitQuizBtn").addEventListener("click", gradeQuiz);
 document.querySelector("#q5").addEventListener("input", () => {
     document.querySelector("#value5").innerHTML = document.querySelector("#q5").value;
 })
