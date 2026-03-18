@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>US Geography Quiz</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"> </script>
+    </head>
+    <body class="text-center">
+        <header>
+            <h1> Janaye Jackson </h1>
+        </header>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../../Labs/Lab1/about.html">About</a>
+            <a href="../../Labs/Lab1/contact.html">Contact</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Labs</button>
+                <div class="dropdown-content">
+                    <a href="../../Labs/Lab1/index.html">Lab 1</a>
+                    <a href="../../Labs/Lab2/guess_number/index.html">Lab 2</a>
+                    <a href="../../Labs/Lab3/index.html">Lab 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><span class="active">HW</span></button>
+                <div class="dropdown-content">
+                    <a href="../HW1/index.html">HW 1</a>
+                    <a href="../HW2/index.html">HW 2</a>
+                    <a href="../HW3/index.html">HW 3</a>
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="p-5 bg-info bg-gradient"> US Geography Quiz </h1>
+
+        <h3><span id="markImg1"></span> Q1. What is the capital of California? </h3>
+        <input type="text" id="q1">
+        <br><br>
+        <div id="q1Feedback"></div>
+        <br><br>
+
+        <!-- Second Question -->
+        <h3><span id="markImg2"></span> Q2. What is the longest river?</h3>
+        <select id="q2">
+            <option value="">Select One</option>
+            <option value="ms">Mississippi</option>
+            <option value="mo">Missouri</option>
+            <option value="co">Colorado</option>
+            <option value="de">Delaware</option>
+        </select>
+        <br><br>
+        <div id="q2Feedback"></div>
+        <br><br>
+
+        <!-- Third Question -->
+        <h3><span id="markImg3"></span> Q3. What presidents are carved into mount Rushmore?</h3>
+        <input type="checkbox" id="Jackson"> <label for="Jackson"> A. Jackson </label>
+        <input type="checkbox" id="Franklin"> <label for="Franklin"> B. Franklin </label>
+        <input type="checkbox" id="Jefferson"> <label for="Jefferson"> T. Jefferson </label>
+        <input type="checkbox" id="Roosevelt"> <label for="Roosevelt"> T. Roosevelt </label>
+        <br><br>
+        <div id="q3Feedback"></div>
+        <br><br>
+
+        <!-- Fourth Question -->
+        <h3><span id="markImg4"></span> Q4. What is the smallest US State?</h3>
+        <div id="q4Choices"></div>
+        <br><br>
+        <div id="q4Feedback"></div>
+
+        <!-- Fifth Question -->
+        <h3><span id=markImg5></span> Q5. What year did California become a state?</h3>
+        <div class="slide-container">
+            <label for="range">Choose a value:</label>
+            <input type="range" id="q5"  min="1800" max="1900" value="1800">
+            <span id="value5">1800</span>
+        </div>
+        <br><br>
+        <div id="q5Feedback"></div>
+        <br><br>
+
+        <!-- Sixth Question -->
+        <h3><span id="markImg6"></span> Q6. Which state has the most national parks?</h3>
+        <input type="text" id="q6">
+        <br><br>
+        <div id="q6Feedback"></div>
+        <br><br>
+
+        <!-- Seventh Question -->
+        <h3><span id="markImg7"></span> Q7. What is the westernmost point in the contiguous United States?</h3>
+        <select id="q7">
+            <option value="">Select One</option>
+            <option value="CA">Cape Alava</option>
+            <option value="YS">Yellow Stone National Park</option>
+            <option value="UR">Umatilla Reef</option>
+            <option value="CF">Cape Flattery</option>
+        </select>
+        <br><br>
+        <div id="q7Feedback"></div>
+        <br><br>
+
+        <!-- Eigth Question -->
+        <h3><span id="markImg8"></span> Q8. Which states border Iowa?</h3>
+        <input type="checkbox" id="NY"> <label for="NY">New York</label>
+        <input type="checkbox" id="KS"> <label for="KS">Kansas</label>
+        <input type="checkbox" id="IL"> <label for="IL">Illinois</label>
+        <input type="checkbox" id="OH"> <label for="OH">Ohio</label>
+        <br><br>
+        <div id="q8Feedback"></div>
+        <br><br>
+
+        <!-- Ninth Question -->
+        <h3><span id="markImg9"></span> Q9. Which state is known as the “Sunshine State”?</h3>
+        <div id="q9Choices"></div>
+        <br><br>
+        <div id="q9Feedback"></div>
+
+        <!-- Tenth Question -->
+        <h3><span id=markImg10></span> Q10. How many timezones does the United States have?</h3>
+        <div class="slide-container">
+            <label for="range">Choose a value:</label>
+            <input type="range" id="q10"  min="0" max="10" value="1">
+            <span id="value10">1</span>
+        </div>
+        <br><br>
+        <div id="q10Feedback"></div>
+        <br><br>
+
+        <h3 id="validationFdbk" class="bg-danger text white"></h3>
+        <button class="btn btn-outline-info"> Submit Quiz </button>
+        
+        <br>
+        <h2 id="totalScore" class="text-info"></h2>
+        <h2 id="pass" class="text-success"></h2>
+        <h3 id="totalAttempts" class="text-info"></h3>
+
+
+    <script src="js/script.js"></script>
+    </body>
+</html>
