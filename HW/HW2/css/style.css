@@ -80,3 +80,8 @@ nav a:hover, .dropbtn:hover{
     margin: 20px auto;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+#foot{
+    height:5%;
+    width:5%;
+}
