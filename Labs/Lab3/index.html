@@ -6,10 +6,11 @@
 
     <body>
         <h1> Sign Up </h1>
+        <form id="signupForm" action="welcome.html">
         First Name:<input type="text" name="fName"><br>
         Last Name: <input type="text" name="lName"><br>
         Gender:    
-            <input type="radio" name="gender" value="m">Male<br>
+            <input type="radio" name="gender" value="m">Male
             <input type="radio" name="gender" value="f">Female<br>	
         Zip Code:  <input type="text" id="zip" name="zip"><br>
         City:   <span id="city"></span> <br>
@@ -27,15 +28,16 @@
         Select a County: <select id="county"></select><br>
         
         Desired Username: 
-        <input type="text" id="username" ><br><br>
+        <input type="text" id="username" ><br>
+        <span id="userAlert"></span><br><br>
 
-        Password: <input type="password">
-        <span id=”suggestedPwd”></span> <br>
-            Type Password Again: <input type="password"><br>
-   
-        <span id=”passwordError”></span> 
+        Password: <input type="password" id="password">
+        <span id="suggestedPwd"></span> <br>
+        Type Password Again: <input type="password" id="retypePass"><br>
+        <span id="passwordError"></span> 
 
         <input type="submit" value="Sign up!">
+        </form>
         
         <script src="js/script.js"></script>
     </body>
