@@ -2,6 +2,7 @@
 document.querySelector("#zip").addEventListener("change", displayCity);
 document.querySelector("#state").addEventListener("change", displayCounties);
 document.querySelector("#username").addEventListener("change", checkUsername);
+document.querySelector("#password").addEventListener("click", suggestPassword);
 document.querySelector("#password").addEventListener("change", checkPassword);
 document.querySelector("#retypePass").addEventListener("change", checkPassword);
 document.querySelector("#signupForm").addEventListener("submit", function(event) {
@@ -12,8 +13,24 @@ document.querySelector("#signupForm").addEventListener("submit", function(event)
 //Global variables 
 var userValid = true;
 var passValid = true;
+document.querySelector("#show").style.display = 'none';
+
 
 //Fucntions
+listState();
+
+
+async function listState(){
+    let states = document.querySelector("#state");
+    let url = `https://csumb.space/api/allStatesAPI.php`;
+    let response = await fetch(url);
+    let data = await response.json();
+    states.innerHTML = "<option> Select State </option>";
+    for (let i of data) {
+        states.innerHTML += `<option value=${i.usps}>${i.state}</option>`;
+    } 
+
+}
 
 //display city from web api after entering a zip code
 async function displayCity(){
@@ -23,9 +40,13 @@ async function displayCity(){
     let data = await response.json();
     
     //console.log(data);
-    document.querySelector("#city").innerHTML = data.city;
-    document.querySelector("#latitude").innerHTML = data.latitude;
-    document.querySelector("#longitude").innerHTML = data.longitude;
+    if(!data){
+        document.querySelector("#zipError").innerHTML = "Zip code not found";
+    } else {
+        document.querySelector("#city").innerHTML = data.city;
+        document.querySelector("#latitude").innerHTML = data.latitude;
+        document.querySelector("#longitude").innerHTML = data.longitude;
+    }
 
 }
 
@@ -58,6 +79,21 @@ async function checkUsername(){
         document.querySelector("#userAlert").style.color = "green";
         userValid = true;
     }
+}
+
+//suggest password
+async function suggestPassword(){
+    let suggestPass = document.querySelector("#suggestedPwd");
+    if(suggestPass.textContent){
+        return;
+    }
+
+    let url = `https://csumb.space/api/suggestedPassword.php?length=8`;
+    let response = await fetch(url);
+    let data = await response.json();
+
+    suggestPass.innerHTML = data.password;
+    document.querySelector("#show").style.display = '';
 }
 
 //check passwords
