@@ -24,7 +24,10 @@ function createPage(){
     document.querySelector("#fullMoon").innerHTML = `Days until Full Moon: ${data.forecast.days_until_full_moon}`;
     document.querySelector("#newMoon").innerHTML = `Days until New Moon: ${data.forecast.days_until_new_moon}`;
     document.querySelector("#nextEclipse").innerHTML = `Days until next Eclipse: ${data.forecast.next_eclipse.days_until}`;
-    document.querySelector("#nextSpecial").innerHTML = `Days until next Special Moon: ${data.forecast.next_special_moon.days_until}`;
+
+    if(data.forecast.next_special_moon.days_until){
+        document.querySelector("#nextSpecial").innerHTML = `Days until next Special Moon: ${data.forecast.next_special_moon.days_until}`;
+    }
 
     let newMoon = formatDate(data.next_phases.new_moon);
     let firstQuart = formatDate(data.next_phases.first_quarter);
