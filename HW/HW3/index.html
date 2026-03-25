@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Phases of the Moon </title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <header>
+            <h1>SEE THE MOON THE DAY YOU WERE BORN</h1>
+    </header>
+    <hr>
+    <body>
+        <main>
+        <h1>Let's get some info first</h1>
+        <form id="infoForm" action="moon.html">
+        First Name: <input type="text" name="fName"><br>
+        Last Name: <input type="text" name="lName"><br>
+        Date of Birth: 
+        <div id="dob">
+            <select id="month" name="month"></select>
+            <select id="day" name="day"></select>
+            <input type="number" name="year" placeholder="Year">
+        </div>  
+        <span id="dobError"></span><br>
+
+        Zip: <input type="text" id="zip" name="zip"> <br>
+        <span id="zipError"></span><br>
+        State: <select id="state" name="state"></select> <br>
+
+        <div id="zodiacRow">
+            <input type="checkbox" id="zodiac">
+            <label for="zodiac">Include Zodiac</label>
+        </div>
+        <br>
+        
+        Desired Username: 
+        <input type="text" id="username" ><br>
+        <span id="userAlert"></span><br>
+
+        Password: <input type="password" id="password"><br>
+        Type Password Again: <input type="password" id="retypePass"><br>
+        <span id="passwordError"></span> 
+
+        <input type="submit" id="submit" value="Get your moon!">
+        </form>
+        </main>
+
+        <footer>
+            <hr>
+            <img id="foot" src="img/CSUMBLogo.png" alt="Picture of CSUMB Logo"><br>
+            CST336 Internet Programming. 2026&copy; Jackson <br>
+            <strong>Disclaimer:</strong> The information is for academic purposes only
+        </footer>
+        
+        <script src="js/script.js"></script>
+    </body>
+</html>

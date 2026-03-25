@@ -1,0 +1,20 @@
+body{
+    text-align: center;
+    background-image: url("../img/stars.jpg");
+    color: rgb(209, 223, 225);
+}
+
+header{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    font-size: smaller;
+    color: paleturquoise;    
+}
+
+#foot{
+    height:5%;
+    width:5%;
+}
