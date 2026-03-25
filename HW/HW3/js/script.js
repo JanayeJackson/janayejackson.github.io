@@ -158,7 +158,7 @@ async function submitForm(e){
     }
     if(month.length == 0 || day.length == 0 || year.length == 0){
         document.querySelector("#dobError").innerHTML = "Month, Day, and Year Required!";
-        document.querySelector("dobError").style.color = "red";
+        document.querySelector("#dobError").style.color = "red";
         isValid = false;
     }
 

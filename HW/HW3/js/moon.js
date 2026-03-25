@@ -1,6 +1,7 @@
 createPage()
+document.querySelector("#showZodiac").style.display = 'none';
 
-//function
+//Functions
 //creates moon page
 function createPage(){
     const data = JSON.parse(localStorage.getItem("moonData"));
@@ -24,11 +25,31 @@ function createPage(){
     document.querySelector("#newMoon").innerHTML = `Days until New Moon: ${data.forecast.days_until_new_moon}`;
     document.querySelector("#nextEclipse").innerHTML = `Days until next Eclipse: ${data.forecast.next_eclipse.days_until}`;
     document.querySelector("#nextSpecial").innerHTML = `Days until next Special Moon: ${data.forecast.next_special_moon.days_until}`;
-    
-    document.querySelector("#nextPhases").innerHTML = ` Next New Moon: <br>
-                                                        Next First Quarter: <br>
-                                                        Next Full Moon: <br>
-                                                        Next Last Quarter: <br>`;
 
+    let newMoon = formatDate(data.next_phases.new_moon);
+    let firstQuart = formatDate(data.next_phases.first_quarter);
+    let fullMoon = formatDate(data.next_phases.full_moon);
+    let lastQuart = formatDate(data.next_phases.last_quarter);
+    
+    document.querySelector("#nextPhases").innerHTML = ` Next New Moon: ${newMoon} <br>
+                                                        Next First Quarter: ${firstQuart} <br>
+                                                        Next Full Moon: ${fullMoon} <br>
+                                                        Next Last Quarter: ${lastQuart} <br>`;
+
+    if(data.zodiac){
+        document.querySelector("#zodiac").innerHTML = `${data.zodiac.sign}`;
+        document.querySelector("#showZodiac").style.display = "";
+    }
+
+}
+
+function formatDate(dateStr) {
+    let date = new Date(dateStr);
+
+    return date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    });
 }
     
